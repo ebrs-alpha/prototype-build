@@ -114,6 +114,19 @@
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
 
+          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#select-option">Enter the amount of litres used</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
 
  <form action="upload-moreinvoices.html" method="post" novalidate> 
 
@@ -131,8 +144,12 @@
 
 
           <label class="govuk-label govuk-label" for="litres">
-           Amount
+           Litres used
           </label>
+
+          <span style="display:none" id="select-option" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Enter the amount of litres used
+          </span>
 
           <div class="govuk-form-group">
             <input class="govuk-input govuk-input--width-10" id="litres" name="litres" type="text" spellcheck="false" autocomplete="litres">
@@ -254,6 +271,14 @@
 
 
         $('.govuk-button').click(function (e) {
+
+
+          
+          if (!$("input[name='litres']").val()) {
+            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+            $(".govuk-error-summary, .govuk-error-message").show();
+            return false;
+          };
 
 
         });

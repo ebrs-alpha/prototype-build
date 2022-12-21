@@ -113,6 +113,19 @@
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
+          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#select-option">Enter your role</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
 
 
  <form action="person-name.html" method="post" novalidate> 
@@ -133,6 +146,11 @@
           <label class="govuk-label govuk-label" for="role">
            Role
           </label>
+
+
+          <span style="display:none" id="select-option" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Enter your role
+          </span>
 
           <div class="govuk-form-group">
             <input class="govuk-input govuk-input--width-20" id="role" name="role" type="text" spellcheck="false" autocomplete="role">
@@ -254,6 +272,13 @@
 
 
         $('.govuk-button').click(function (e) {
+
+                    
+          if (!$("input[name='role']").val()) {
+            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+            $(".govuk-error-summary, .govuk-error-message").show();
+            return false;
+          };
 
 
         });

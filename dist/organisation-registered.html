@@ -114,6 +114,21 @@
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
 
+          
+          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#select-option">Enter the registration number</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
  <form action="organisation-address.html" method="post" novalidate> 
 
   <div class="govuk-grid-row">
@@ -129,12 +144,16 @@
         <div class="govuk-form-group">
 
 
-          <label class="govuk-label govuk-label" for="name">
+          <label class="govuk-label govuk-label" for="regno">
            Registration number
           </label>
 
+          <span style="display:none" id="select-option" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Enter the registration number
+          </span>
+
           <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="name" name="name" type="name" spellcheck="false" autocomplete="name">
+            <input class="govuk-input govuk-input--width-20" id="regno" name="regno" type="text" spellcheck="false" autocomplete="regno">
           </div>
 
         </div>
@@ -254,14 +273,19 @@
       $( document ).ready(function() {
 
         $('.govuk-button').click(function (e) {
+
+
+          
+          if (!$("input[name='regno']").val()) {
+            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+            $(".govuk-error-summary, .govuk-error-message").show();
+            return false;
+          };
+
+
+
+
         });
-
-
-
-
-
-
-
 
 
       });

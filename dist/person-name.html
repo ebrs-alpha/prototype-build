@@ -113,7 +113,18 @@
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-
+          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#select-option">Enter your name</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
  <form action="person-address.html" method="post" novalidate> 
 
@@ -133,6 +144,11 @@
           <label class="govuk-label govuk-label" for="name">
            Name
           </label>
+
+          
+          <span style="display:none" id="select-option" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Enter your name
+          </span>
 
           <div class="govuk-form-group">
             <input class="govuk-input govuk-input--width-20" id="name" name="name" type="text" spellcheck="false" autocomplete="name">
@@ -254,6 +270,13 @@
 
 
         $('.govuk-button').click(function (e) {
+
+
+          if (!$("input[name='name']").val()) {
+            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+            $(".govuk-error-summary, .govuk-error-message").show();
+            return false;
+          };
 
 
         });
