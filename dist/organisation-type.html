@@ -6,7 +6,7 @@
     <title>
         Get support with energy costs
 </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=org-typeice-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,6 +114,20 @@
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
 
+          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#select-option">Select an option to continue</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
 
  <form action="organisation-regno.html" method="post" novalidate> 
 
@@ -124,28 +138,82 @@
     <div class="govuk-grid-column-two-thirds">
 
         
-       
-        <h1 class="govuk-heading-l">What is your organisation’s type?</h1>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-6">
+            <h1 class="govuk-fieldset__heading">
+              What is your organisation's type?
+            </h1>
+          </legend>
 
-        <div class="govuk-form-group">
+          <span style="display:none" id="select-option" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Select an option to continue
+          </span>
+
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="org-type1" name="org-type" type="radio" value="org-type1">
+              <label class="govuk-label govuk-radios__label" for="org-type1">
+                Sole trader
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="org-type2" name="org-type" type="radio" value="org-type2">
+              <label class="govuk-label govuk-radios__label" for="org-type2">
+                PLC
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="org-type3" name="org-type" type="radio" value="org-type3">
+              <label class="govuk-label govuk-radios__label" for="org-type3">
+                CIC
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sorg-type4" name="org-type" type="radio" value="org-type4">
+              <label class="govuk-label govuk-radios__label" for="org-type4">
+               Limited by shares
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="org-type5" name="org-type" type="radio" value="org-type5">
+              <label class="govuk-label govuk-radios__label" for="org-type5">
+                Limited by guarantee
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="org-type6" name="org-type" type="radio" value="org-type6">
+              <label class="govuk-label govuk-radios__label" for="org-type6">
+                Private limited
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="org-type7" name="org-type" type="radio" value="org-type7">
+              <label class="govuk-label govuk-radios__label" for="org-type7">
+                RTM
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="other-org-type" name="org-type8" type="radio" value="org-type8">
+              <label class="govuk-label govuk-radios__label" for="org-type8">
+                Charity
+              </label>
+            </div>
 
 
-          <label class="govuk-label govuk-label" for="name">
-           Name
-          </label>
-
-          <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="name" name="name" type="name" spellcheck="false" autocomplete="name">
           </div>
+      
+        </fieldset>
+      </div>
 
-        </div>
 
 
-
-
-          <button class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
-         Continue
-          </button>
+        <button class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
+        Continue
+        </button>
         
     </div>
 
@@ -254,6 +322,14 @@
       $( document ).ready(function() {
 
         $('.govuk-button').click(function (e) {
+
+
+          if (!$("input[name='org-type']:checked").val()) {
+              $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+              $(".govuk-error-summary, .govuk-error-message").show();
+              return false;
+            };
+
 
         });
 
