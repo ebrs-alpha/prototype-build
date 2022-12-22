@@ -113,20 +113,6 @@
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-
-          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-            <h2 class="govuk-error-summary__title" id="error-summary-title">
-              There is a problem
-            </h2>
-            <div class="govuk-error-summary__body">
-              <ul class="govuk-list govuk-error-summary__list">
-                <li>
-                  <a href="#select-option">Enter details to continue</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
 <!-- <form action="is-this-your-main-home.html" method="post" novalidate> -->
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -144,11 +130,6 @@
       <p class="govuk-hint">We will use your business address to check whether you are eligible for energy bill support and you need to apply for it.</p>
 
       
-
-  <span style="display:none" id="select-option" class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span>Enter details to continue
-  </span>
-        
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="address-line-1">
@@ -217,9 +198,9 @@
     
   
 
-<button class="govuk-button" data-module="govuk-button">
+<a href="electricity-account.html" class="govuk-button" data-module="govuk-button">
   Continue
-</button>
+</a>
 
     </div>
   </div>
@@ -323,17 +304,6 @@
     $( document ).ready(function() {
 
       $('.govuk-button').on("click", function() {
-
-
-          if (!$("input[type='text']").val()) {
-            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-            $("div").closest(".govuk-form-group.optional").removeClass("govuk-form-group--error").addClass("govuk-form-group-no--error");
-            $(".govuk-error-summary, .govuk-error-message").show();
-          return false;
-        }
-          else if ($("input[type='text']").val()) {
-            window.location.href = 'electricity-account.html';
-          };
 
 
       });
