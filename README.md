@@ -16,7 +16,7 @@ See the [blog post](https://render.com/blog/static-site-auth-pagecrypt) that use
 
 That's it! Your static site will be live on your Render URL as soon as the build finishes.
 
-##Download and view
+## Download and view html
 
 This is a static html build utilising the GDS toolkit.
 To view on download, go to the dist folder and start.html.
