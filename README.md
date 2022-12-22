@@ -15,3 +15,9 @@ See the [blog post](https://render.com/blog/static-site-auth-pagecrypt) that use
   * **Advanced** ➡️ **Add Environment Variable** ➡️ Create an environment variable named `PASSWORD`. Its value will be used to encrypt your site and used by visitors to decrypt and view the site.
 
 That's it! Your static site will be live on your Render URL as soon as the build finishes.
+
+#Download and view
+
+This is a static html build utilising the GDS toolkit.
+To view on download, go to the dist folder and start.html.
+The dist folder contains all the html and associated assets.
