@@ -18,6 +18,6 @@ That's it! Your static site will be live on your Render URL as soon as the build
 
 ## Download and view html
 
-1. This is a static html build utilising the GDS toolkit.
-2. To view on download, go to the dist folder and start.html.
-3. The dist folder contains all the html and associated assets.
+1. This is a static html build utilising the GDS toolkit
+2. To view on download, go to the folder called dist >  start.html
+3. The dist folder contains all the html and associated assets
