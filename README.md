@@ -4,10 +4,10 @@
 2. To view on download, go to the folder called dist >  start.html
 3. The dist folder contains all the html and associated assets
 
-# PageCrypt for password protection on Render static sites
+## PageCrypt for password protection on Render static sites
 
+Notes:
 This project is a static site that demonstates using [PageCrypt](https://github.com/Greenheart/pagecrypt) to password protect the site.
-
 An example deployment of this repository is at [https://pagecrypt.onrender.com](https://pagecrypt.onrender.com). Use the password `s3cr3t` to view it.
 
 ## Deployment
