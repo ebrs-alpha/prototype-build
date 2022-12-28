@@ -12,17 +12,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     
-      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="govuk/assets/images/favicon.ico" type="image/x-icon">
-      <link rel="mask-icon" href="govuk/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
-      <link rel="apple-touch-icon" sizes="180x180" href="govuk/assets/images/govuk-apple-touch-icon-180x180.png">
-      <link rel="apple-touch-icon" sizes="167x167" href="govuk/assets/images/govuk-apple-touch-icon-167x167.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="govuk/assets/images/govuk-apple-touch-icon-152x152.png">
-      <link rel="apple-touch-icon" href="govuk/assets/images/govuk-apple-touch-icon.png">
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="../govuk/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="../govuk/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
+      <link rel="apple-touch-icon" sizes="180x180" href="../govuk/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="../govuk/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="../govuk/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="../govuk/assets/images/govuk-apple-touch-icon.png">
     
 
     
-  <!--[if lte IE 8]><link href="public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-<!--[if gt IE 8]><!--><link href="public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+  <!--[if lte IE 8]><link href="../public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="../public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
 
 
 
@@ -113,97 +113,62 @@
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-
-
-  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-    <h2 class="govuk-error-summary__title" id="error-summary-title">
-      There is a problem
-    </h2>
-    <div class="govuk-error-summary__body">
-      <ul class="govuk-list govuk-error-summary__list">
-        <li>
-          <a href="#select-option">Select an option to continue</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
+          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#select-option">Enter the suppliers name</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
 
 
-<!-- <form action="" method="post" novalidate> -->
+ <!-- <form action="electricity-number.html" method="post" novalidate>  -->
 
   <div class="govuk-grid-row">
+
+
+
     <div class="govuk-grid-column-two-thirds">
-      
 
-<div class="govuk-form-group">
-
-  <fieldset class="govuk-fieldset">
-  
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-  
-    <h1 class="govuk-fieldset__heading">
-      Is your building connected to the electric grid?
-    </h1>
-  
-  </legend>
-
-  <span style="display:none" id="select-option" class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span>Select an option to continue
-  </span>
-
-  <div class="govuk-radios govuk-radios--inline"
-    data-module="govuk-radios">
         
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="electric-grid" name="electric-grid" type="radio" value="yes">
-          <label class="govuk-label govuk-radios__label" for="electric-grid">
-        Yes
-      </label>
-          
+       
+        <h1 class="govuk-heading-l">What is the utility suppliers name?</h1>
+
+        <div class="govuk-form-group">
+
+
+          <label class="govuk-label govuk-label" for="supname">
+           Suppliers name
+          </label>
+
+          <span style="display:none" id="select-option" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Enter the suppliers name
+          </span>
+
+          <div class="govuk-form-group">
+            <input class="govuk-input govuk-input--width-20" id="supname" name="supname" type="text" spellcheck="false" autocomplete="supname">
+          </div>
+
         </div>
-        
-        
-      
-    
-      
-        
-        
-        
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="electric-grid-2" name="electric-grid" type="radio" value="no">
-          <label class="govuk-label govuk-radios__label" for="electric-grid-2">
-        No
-      </label>
-          
-        </div>
-        
-        
-      
-    
-  </div>
-  
-
-</fieldset>
 
 
-</div>
-
-      
-
-  
-    
-  
-
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
+<a href="electricity-number.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
+         Continue</a>
+        
     </div>
+
+
+
+
   </div>
 
- <!-- </form> -->
+ <!-- </form>  -->
 
         </main>
       </div>
@@ -282,42 +247,34 @@
     
   
     <!-- Javascript -->
-<script src="public/javascripts/jquery-1.11.3.js"></script>
+<script src="../public/javascripts/jquery-1.11.3.js"></script>
 
 
-  <script src="extension-assets/govuk-frontend/govuk/all.js"></script>
+  <script src="../extension-assets/govuk-frontend/govuk/all.js"></script>
 
-  <script src="extension-assets/javascripts/step-by-step-navigation.js"></script>
+  <script src="../extension-assets/javascripts/step-by-step-navigation.js"></script>
 
-  <script src="extension-assets/javascripts/step-by-step-polyfills.js"></script>
-
-
-<script src="public/javascripts/application.js"></script>
+  <script src="../extension-assets/javascripts/step-by-step-polyfills.js"></script>
 
 
-  <script src="public/javascripts/auto-store-data.js"></script>
+<script src="../public/javascripts/application.js"></script>
+
+
+  <script src="../public/javascripts/auto-store-data.js"></script>
 
   
     <script type="text/javascript">
 
       $( document ).ready(function() {
 
-        $(".govuk-error-summary, .govuk-error-message").hide();
 
         $('.govuk-button').click(function (e) {
-
-            if ($('#electric-grid').is(':checked')) {
-            window.location.href = 'topup/kerosene-amount.html'; 
-          }
-          else if ($('#electric-grid-2').is(':checked')) {
-            window.location.href = 'kerosene-amount-electricno.html';
+          
+          if (!$("input[name='supname']").val()) {
+            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+            $(".govuk-error-summary, .govuk-error-message").show();
+            return false;
           };
-
-            if (!$("input[name='electric-grid']:checked").val()) {
-              $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-              $(".govuk-error-summary, .govuk-error-message").show();
-              return false;
-            };
 
         });
 
