@@ -195,10 +195,9 @@
   
     
   
-
-<a href="electric-grid.html" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Continue
-</a>
+</button>
 
     </div>
   </div>
@@ -305,6 +304,21 @@
         $(".govuk-error-summary, .govuk-error-message").hide();
 
         $('.govuk-button').click(function (e) {
+
+
+          if ($('#kerosene-amount').is(':checked')) {
+            window.location.href = 'electric-grid.html';
+          }
+          else if ($('#kerosene-amount-2').is(':checked')) {
+            window.location.href = 'ineligible-building.html';
+          };
+
+            if (!$("input[name='kerosene-amount']:checked").val()) {
+              $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+              $(".govuk-error-summary, .govuk-error-message").show();
+              return false;
+            };
+
 
         });
 
