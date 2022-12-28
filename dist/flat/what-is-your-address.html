@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-        Get support with energy costs
+      Get support with energy costs
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
@@ -113,63 +113,98 @@
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-            <h2 class="govuk-error-summary__title" id="error-summary-title">
-              There is a problem
-            </h2>
-            <div class="govuk-error-summary__body">
-              <ul class="govuk-list govuk-error-summary__list">
-                <li>
-                  <a href="#select-option">Enter your role</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-
-
- <!-- <form action="person-name.html" method="post" novalidate>  -->
-
+<!-- <form action="is-this-your-main-home.html" method="post" novalidate> -->
   <div class="govuk-grid-row">
-
-
-
     <div class="govuk-grid-column-two-thirds">
+      <fieldset class="govuk-fieldset">
+  
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  
+    <h1 class="govuk-fieldset__heading">
+      What is your property address?
+    </h1>
+  
+  </legend>
+  
+
+      <p class="govuk-hint">We will use your property address to check whether you are eligible for energy bill support and you need to apply for it.</p>
+
+      
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="address-line-1">
+    Address line 1
+  </label>
+
+<input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+
+</div>
+
 
         
-       
-        <h1 class="govuk-heading-l">What is your role?</h1>
 
-        <div class="govuk-form-group">
+<div class="govuk-form-group optional">
+  <label class="govuk-label" for="address-line-2">
+    Address line 2 (optional)
+  </label>
 
+<input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
 
-          <label class="govuk-label govuk-label" for="role">
-           Role
-          </label>
-
-
-          <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter your role
-          </span>
-
-          <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="role" name="role" type="text" spellcheck="false" autocomplete="role">
-          </div>
-
-        </div>
+</div>
 
 
-<a href="organisation-name.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
-         Continue</a>
         
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="address-town">
+    Town or city
+  </label>
+
+<input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+
+</div>
+
+
+        
+
+<div class="govuk-form-group optional">
+  <label class="govuk-label" for="address-county">
+    County (optional)
+  </label>
+
+<input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+
+</div>
+
+
+        
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="address-postcode">
+    Postcode
+  </label>
+
+<input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+
+</div>
+
+    
+
+</fieldset>
+
+    
+
+  
+    
+  
+
+<a href="upload-moreinvoices.html" class="govuk-button" data-module="govuk-button">
+  Continue
+</a>
+
     </div>
-
-
-
-
   </div>
-
- <!-- </form>  -->
+<!-- </form> -->
 
         </main>
       </div>
@@ -263,34 +298,18 @@
 
   <script src="../public/javascripts/auto-store-data.js"></script>
 
-  
-    <script type="text/javascript">
 
-      $( document ).ready(function() {
+  <script type="text/javascript">
 
+    $( document ).ready(function() {
 
-        $('.govuk-button').click(function (e) {
-
-                    
-          if (!$("input[name='role']").val()) {
-            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-            $(".govuk-error-summary, .govuk-error-message").show();
-            return false;
-          };
-
-
-        });
-
-
-
-
-
-
-
+      $('.govuk-button').on("click", function() {
 
 
       });
-    </script>
+
+    });
+  </script>
 
 
     

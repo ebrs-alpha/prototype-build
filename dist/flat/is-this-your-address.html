@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-        Get support with energy costs
+      Get support with energy costs
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
@@ -106,12 +106,12 @@
 </div>
 
 
-
 <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
 
-
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
 
           <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
             <h2 class="govuk-error-summary__title" id="error-summary-title">
@@ -120,56 +120,97 @@
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
                 <li>
-                  <a href="#select-option">Enter your role</a>
+                  <a href="#select-option">Select an option to continue</a>
                 </li>
               </ul>
             </div>
           </div>
 
-
-
- <!-- <form action="person-name.html" method="post" novalidate>  -->
-
+          
+<!-- <form action="address-confirmation-check"> -->
   <div class="govuk-grid-row">
-
-
-
     <div class="govuk-grid-column-two-thirds">
+      
 
-        
-       
-        <h1 class="govuk-heading-l">What is your role?</h1>
+<div class="govuk-form-group">
 
-        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="is-this-your-address-hint">
+  
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  
+    <h1 class="govuk-fieldset__heading">
+      Is this your property address?
+    </h1>
+  
+  </legend>
+  
 
-
-          <label class="govuk-label govuk-label" for="role">
-           Role
-          </label>
-
-
-          <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter your role
-          </span>
-
-          <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="role" name="role" type="text" spellcheck="false" autocomplete="role">
-          </div>
-
-        </div>
-
-
-<a href="organisation-name.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
-         Continue</a>
-        
-    </div>
-
-
-
-
+  <div id="is-this-your-address-hint" class="govuk-hint">
+    <p class="govuk-body-l govuk-!-margin-bottom-2">1 Test Street, Test Town, TT1 1AB</p><p class="govuk-body">If this is not your property address, you can enter it manually on the next page</p>
   </div>
 
- <!-- </form>  -->
+
+  <span style="display:none" id="select-option" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>Select an option to continue
+  </span>
+
+
+  <div class="govuk-radios govuk-radios--inline"
+    data-module="govuk-radios">
+    
+      
+          
+        
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="is-this-your-address" name="is-this-your-address" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="is-this-your-address">
+        Yes
+      </label>
+          
+        </div>
+        
+        
+      
+    
+      
+        
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="is-this-your-address-2" name="is-this-your-address" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="is-this-your-address-2">
+        No
+      </label>
+          
+        </div>
+        
+        
+      
+    
+  </div>
+  
+
+</fieldset>
+
+
+</div>
+
+      
+
+  
+    
+  
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+    </div>
+  </div>
+<!-- </form> -->
+
 
         </main>
       </div>
@@ -263,37 +304,34 @@
 
   <script src="../public/javascripts/auto-store-data.js"></script>
 
-  
-    <script type="text/javascript">
 
-      $( document ).ready(function() {
+  <script type="text/javascript">
 
+    $( document ).ready(function() {
 
-        $('.govuk-button').click(function (e) {
+      $('.govuk-button').click(function (e) {
 
-                    
-          if (!$("input[name='role']").val()) {
-            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-            $(".govuk-error-summary, .govuk-error-message").show();
-            return false;
+          if ($('#is-this-your-address').is(':checked')) {
+            window.location.href = 'upload-moreinvoices.html';
+          }
+          else if ($('#is-this-your-address-2').is(':checked')) {
+            window.location.href = 'what-is-your-address.html';
           };
 
-
-        });
-
-
-
-
-
-
-
+if (!$("input[name='is-this-your-address']:checked").val()) {
+  $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+  $(".govuk-error-summary, .govuk-error-message").show();
+  return false;
+};
 
 
       });
-    </script>
+
+    });
+  </script>
 
 
-    
+
   
   <!-- GOV.UK Prototype Kit v12.3.0 -->
 
