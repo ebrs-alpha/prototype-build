@@ -144,7 +144,7 @@
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
   
     <h1 class="govuk-fieldset__heading">
-      Is your building connected to the electric grid?
+      Do you use more than 10,000 litres of kerosene a year to heat your building?
     </h1>
   
   </legend>
@@ -157,8 +157,8 @@
     data-module="govuk-radios">
         
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="electric-grid" name="electric-grid" type="radio" value="yes">
-          <label class="govuk-label govuk-radios__label" for="electric-grid">
+          <input class="govuk-radios__input" id="kerosene-amount" name="kerosene-amount" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="kerosene-amount">
         Yes
       </label>
           
@@ -172,8 +172,8 @@
         
         
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="electric-grid-2" name="electric-grid" type="radio" value="no">
-          <label class="govuk-label govuk-radios__label" for="electric-grid-2">
+          <input class="govuk-radios__input" id="kerosene-amount-2" name="kerosene-amount" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="kerosene-amount-2">
         No
       </label>
           
@@ -306,14 +306,14 @@
 
         $('.govuk-button').click(function (e) {
 
-            if ($('#electric-grid').is(':checked')) {
-            window.location.href = 'kerosene-amount.html'; 
+            if ($('#kerosene-amount').is(':checked')) {
+            window.location.href = 'ukbank-account.html';
           }
-          else if ($('#electric-grid-2').is(':checked')) {
-            window.location.href = 'kerosene-amount-electricno.html';
+          else if ($('#kerosene-amount-2').is(':checked')) {
+            window.location.href = 'flat-rate.html';
           };
 
-            if (!$("input[name='electric-grid']:checked").val()) {
+            if (!$("input[name='kerosene-amount']:checked").val()) {
               $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
               $(".govuk-error-summary, .govuk-error-message").show();
               return false;
