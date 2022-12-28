@@ -4,7 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Get support with energy costs</title>
+      Get support with energy costs
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
     
@@ -91,39 +92,124 @@
 
     
       <div class="govuk-width-container ">
+        
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="feedback.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
 
 
-        <div class="govuk-phase-banner">
-          <p class="govuk-phase-banner__content">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-              alpha
-            </strong>
-            <span class="govuk-phase-banner__text">
-              This is a new service – your <a class="govuk-link" href="feedback.html">feedback</a> will help us to improve it.
-            </span>
-          </p>
+
+<a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#select-option">Select an option to continue</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+<!-- <form action="" method="post" novalidate> -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+  
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  
+    <h1 class="govuk-fieldset__heading">
+      Is the property address you are applying for the same as the organisation's address?
+    </h1>
+  
+  </legend>
+
+
+  <span style="display:none" id="select-option" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>Select an option to continue
+  </span>
+
+  <div class="govuk-radios govuk-radios--inline"
+    data-module="govuk-radios">
+    
+      
+          
+        
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="same-address" name="same-address" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="same-address">
+        Yes
+      </label>
+          
         </div>
         
         
+      
+    
+      
         
-        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="same-address-2" name="same-address" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="same-address-2">
+        No
+      </label>
+          
+        </div>
+        
+        
+      
+    
+  </div>
+  
+
+</fieldset>
+
+
+</div>
+
       
 
+  
+    
+  
 
-        
-        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-          
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">The authorised person/s should complete the application</h1>
-    <p class="govuk-body">Lorem ipsum Lorem ipsum Lorem ipsum </a></p>
-    <h2 class="govuk-heading-m">How to apply</h2>
-    <p class="govuk-body">Lorem ipsum Lorem ipsum Lorem ipsum </a></p>
-    <p class="govuk-body">Lorem ipsum Lorem ipsum Lorem ipsum </a></p>
- 
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
 
+    </div>
   </div>
-</div>
+
+ <!-- </form> -->
 
         </main>
       </div>
@@ -216,6 +302,42 @@
 
 
   <script src="../public/javascripts/auto-store-data.js"></script>
+
+  
+    <script type="text/javascript">
+
+      $( document ).ready(function() {
+
+        $(".govuk-error-summary, .govuk-error-message").hide();
+
+        $('.govuk-button').click(function (e) {
+
+
+          if ($('#same-address').is(':checked')) {
+            window.location.href = 'kerosene-litres.html';
+          }
+          else if ($('#same-address-2').is(':checked')) {
+            window.location.href = 'building-address.html';
+          };
+
+            if (!$("input[name='same-address']:checked").val()) {
+              $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+              $(".govuk-error-summary, .govuk-error-message").show();
+              return false;
+            };
+
+        });
+
+
+
+
+
+
+
+
+
+      });
+    </script>
 
 
     
