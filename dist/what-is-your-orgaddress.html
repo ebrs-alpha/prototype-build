@@ -106,12 +106,14 @@
 </div>
 
 
+
 <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
 
+
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-          
-<!-- <form action="electricity-account.html" method="post" novalidate> -->
+
+<!-- <form action="is-this-your-main-home.html" method="post" novalidate> -->
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <fieldset class="govuk-fieldset">
@@ -119,94 +121,84 @@
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
   
     <h1 class="govuk-fieldset__heading">
-      Choose your property address
+      What is your organisation address?
     </h1>
   
   </legend>
   
 
-      <p class="govuk-hint">We found several addresses for the post code TT1 1AB.</p>
-      
+      <p class="govuk-hint">We will use your organisations address to check whether you are eligible for energy bill support and you need to apply for it.</p>
+
       
 
 <div class="govuk-form-group">
-  <label class="govuk-label" for="address">
-    Address
+  <label class="govuk-label" for="address-line-1">
+    Address line 1
   </label>
 
+<input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
 
-  <select class="govuk-select" id="address" name="address">
-  
-    
-      <option value="1 Test Street, Test Town TT1 1AB">1 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="2 Test Street, Test Town TT1 1AB">2 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="3 Test Street, Test Town TT1 1AB">4 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="3 Test Street, Test Town TT1 1AB">3 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="4 Test Street, Test Town TT1 1AB">4 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="5 Test Street, Test Town TT1 1AB">5 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="6 Test Street, Test Town TT1 1AB">6 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="7 Test Street, Test Town TT1 1AB">7 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="8 Test Street, Test Town TT1 1AB">8 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="9 Test Street, Test Town TT1 1AB">9 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="10 Test Street, Test Town TT1 1AB">10 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="11 Test Street, Test Town TT1 1AB">11 Test Street, Test Town TT1 1AB</option>
-    
-  
-  </select>
 </div>
 
-      
+
+        
+
+<div class="govuk-form-group optional">
+  <label class="govuk-label" for="address-line-2">
+    Address line 2 (optional)
+  </label>
+
+<input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+
+</div>
+
+
+        
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="address-town">
+    Town or city
+  </label>
+
+<input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+
+</div>
+
+
+        
+
+<div class="govuk-form-group optional">
+  <label class="govuk-label" for="address-county">
+    County (optional)
+  </label>
+
+<input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+
+</div>
+
+
+        
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="address-postcode">
+    Postcode
+  </label>
+
+<input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+
+</div>
+
+    
 
 </fieldset>
 
-    </div>
-  </div>
-  <div class="govuk-grid-row govuk-!-margin-bottom-4 ">
-    <div class="govuk-grid-column-two-thirds">
-      <a href="what-is-your-address.html" class="govuk-link govuk-link--no-visited-state">The property address isn't listed</a>
-    </div>
-  </div>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
     
 
   
     
   
-<a href="meter-number.html" class="govuk-button" data-module="govuk-button"> 
+
+<a href="electricity-account.html" class="govuk-button" data-module="govuk-button">
   Continue
 </a>
 
@@ -305,6 +297,19 @@
 
 
   <script src="public/javascripts/auto-store-data.js"></script>
+
+
+  <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+      $('.govuk-button').on("click", function() {
+
+
+      });
+
+    });
+  </script>
 
 
     

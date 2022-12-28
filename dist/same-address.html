@@ -106,113 +106,110 @@
 </div>
 
 
+
 <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
 
+
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-          
-<!-- <form action="electricity-account.html" method="post" novalidate> -->
+
+
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#select-option">Select an option to continue</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+<!-- <form action="" method="post" novalidate> -->
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <fieldset class="govuk-fieldset">
+      
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
   
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
   
     <h1 class="govuk-fieldset__heading">
-      Choose your property address
+      Is the property address you are applying for the same as the organisation's address?
     </h1>
   
   </legend>
-  
 
-      <p class="govuk-hint">We found several addresses for the post code TT1 1AB.</p>
+
+  <span style="display:none" id="select-option" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>Select an option to continue
+  </span>
+
+  <div class="govuk-radios govuk-radios--inline"
+    data-module="govuk-radios">
+    
       
+          
+        
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="same-address" name="same-address" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="same-address">
+        Yes
+      </label>
+          
+        </div>
+        
+        
       
+    
+      
+        
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="same-address-2" name="same-address" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="same-address-2">
+        No
+      </label>
+          
+        </div>
+        
+        
+      
+    
+  </div>
+  
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="address">
-    Address
-  </label>
+</fieldset>
 
 
-  <select class="govuk-select" id="address" name="address">
-  
-    
-      <option value="1 Test Street, Test Town TT1 1AB">1 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="2 Test Street, Test Town TT1 1AB">2 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="3 Test Street, Test Town TT1 1AB">4 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="3 Test Street, Test Town TT1 1AB">3 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="4 Test Street, Test Town TT1 1AB">4 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="5 Test Street, Test Town TT1 1AB">5 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="6 Test Street, Test Town TT1 1AB">6 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="7 Test Street, Test Town TT1 1AB">7 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="8 Test Street, Test Town TT1 1AB">8 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="9 Test Street, Test Town TT1 1AB">9 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="10 Test Street, Test Town TT1 1AB">10 Test Street, Test Town TT1 1AB</option>
-    
-  
-    
-      <option value="11 Test Street, Test Town TT1 1AB">11 Test Street, Test Town TT1 1AB</option>
-    
-  
-  </select>
 </div>
 
       
 
-</fieldset>
-
-    </div>
-  </div>
-  <div class="govuk-grid-row govuk-!-margin-bottom-4 ">
-    <div class="govuk-grid-column-two-thirds">
-      <a href="what-is-your-address.html" class="govuk-link govuk-link--no-visited-state">The property address isn't listed</a>
-    </div>
-  </div>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-    
-
   
     
   
-<a href="meter-number.html" class="govuk-button" data-module="govuk-button"> 
+
+<button class="govuk-button" data-module="govuk-button">
   Continue
-</a>
+</button>
 
     </div>
   </div>
-<!-- </form> -->
+
+ <!-- </form> -->
 
         </main>
       </div>
@@ -305,6 +302,42 @@
 
 
   <script src="public/javascripts/auto-store-data.js"></script>
+
+  
+    <script type="text/javascript">
+
+      $( document ).ready(function() {
+
+        $(".govuk-error-summary, .govuk-error-message").hide();
+
+        $('.govuk-button').click(function (e) {
+
+
+          if ($('#same-address').is(':checked')) {
+            window.location.href = 'meter-number.html';
+          }
+          else if ($('#same-address-2').is(':checked')) {
+            window.location.href = 'building-address.html';
+          };
+
+            if (!$("input[name='same-address']:checked").val()) {
+              $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+              $(".govuk-error-summary, .govuk-error-message").show();
+              return false;
+            };
+
+        });
+
+
+
+
+
+
+
+
+
+      });
+    </script>
 
 
     
