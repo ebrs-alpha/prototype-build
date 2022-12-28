@@ -150,56 +150,88 @@
             <span class="govuk-visually-hidden">Error:</span>Select an option to continue
           </span>
 
-          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="org-type1" name="org-type" type="radio" value="org-type1">
               <label class="govuk-label govuk-radios__label" for="org-type1">
                 Sole trader
-              </label>
+              </label>   
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="org-type2" name="org-type" type="radio" value="org-type2">
+              <input class="govuk-radios__input" id="org-type2" name="org-type" type="radio" value="org-type2"  data-aria-controls="org-cond-type2">
               <label class="govuk-label govuk-radios__label" for="org-type2">
-                PLC
+                Registered business
               </label>
             </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="org-cond-type2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="reg-no">
+                  Your company registration number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="reg-no" name="reg-no" type="text">
+              </div>
+            </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="org-type3" name="org-type" type="radio" value="org-type3">
+              <input class="govuk-radios__input" id="org-type3" name="org-type" type="radio" value="org-type3" data-aria-controls="org-cond-type3">
               <label class="govuk-label govuk-radios__label" for="org-type3">
-                CIC
+                Registered charity
               </label>
             </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="org-cond-type3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="reg-no">
+                  Your company registration number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="reg-no" name="reg-no" type="text">
+              </div>
+            </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sorg-type4" name="org-type" type="radio" value="org-type4">
+              <input class="govuk-radios__input" id="org-type4" name="org-type" type="radio" value="org-type4" data-aria-controls="org-cond-type4">
               <label class="govuk-label govuk-radios__label" for="org-type4">
-               Limited by shares
+               Place of worship
               </label>
             </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="org-cond-type4">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="reg-no">
+                  Your company registration number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="reg-no" name="reg-no" type="text">
+              </div>
+            </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="org-type5" name="org-type" type="radio" value="org-type5">
+              <input class="govuk-radios__input" id="org-type5" name="org-type" type="radio" value="org-type5" data-aria-controls="org-cond-type5">
               <label class="govuk-label govuk-radios__label" for="org-type5">
-                Limited by guarantee
+                Educational institute
               </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="org-cond-type5">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="reg-no">
+                  Your company registration number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="reg-no" name="reg-no" type="text">
+              </div>
             </div>
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="org-type6" name="org-type" type="radio" value="org-type6">
               <label class="govuk-label govuk-radios__label" for="org-type6">
-                Private limited
+                Another type 1
               </label>
             </div>
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="org-type7" name="org-type" type="radio" value="org-type7">
               <label class="govuk-label govuk-radios__label" for="org-type7">
-                RTM
+                Another type 2
               </label>
             </div>
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="other-org-type" name="org-type8" type="radio" value="org-type8">
               <label class="govuk-label govuk-radios__label" for="org-type8">
-                Charity
+                Another type 3
               </label>
             </div>
 
