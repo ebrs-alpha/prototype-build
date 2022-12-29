@@ -120,7 +120,7 @@
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
                 <li>
-                  <a href="#select-option">Enter your name</a>
+                  <a href="#select-option">Enter your full name</a>
                 </li>
               </ul>
             </div>
@@ -135,23 +135,31 @@
     <div class="govuk-grid-column-two-thirds">
 
         
-       
-        <h1 class="govuk-heading-l">What is your name?</h1>
+
 
         <div class="govuk-form-group">
 
-
-          <label class="govuk-label govuk-label" for="name">
-           Name
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="person-name">
+            What is your full name?
           </label>
+        </h1>
+        <div id="person-name-hint" class="govuk-hint">
+          Enter your name in full, as it appears on official documents - don’t use initials.
+        </div>
 
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>First name</li>
+          <li>Middle name (optional)</li>
+          <li>Last name</li>
+        </ul>
           
           <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter your name
+            <span class="govuk-visually-hidden">Error:</span>Enter your full name
           </span>
 
           <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="name" name="name" type="text" spellcheck="false" autocomplete="name">
+            <input class="govuk-input govuk-input--width-20" id="person-name" name="name" type="text" spellcheck="false" autocomplete="name"  aria-describedby="person-name-hint">
           </div>
 
         </div>
