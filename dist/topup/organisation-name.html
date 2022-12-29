@@ -121,7 +121,7 @@
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
                 <li>
-                  <a href="#select-option">Enter the organisations name</a>
+                  <a href="#select-option">Enter the Business name</a>
                 </li>
               </ul>
             </div>
@@ -140,21 +140,27 @@
 
         
        
-        <h1 class="govuk-heading-l">What is your organisation’s name?</h1>
-
+        
         <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-l">What's the name of the business?</h1>
+
+
+        <div id="org-name-hint" class="govuk-hint">
+         If you're a sole trader enter your full name.
+        </div>
 
 
           <label class="govuk-label govuk-label" for="orgname">
-           Organisations name
+           Business name
           </label>
 
           <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter the organisations name
+            <span class="govuk-visually-hidden">Error:</span>Enter the Business name
           </span>
 
           <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="orgname" name="orgname" type="text" spellcheck="false" autocomplete="orgname">
+            <input class="govuk-input govuk-input--width-20" id="orgname" name="orgname" type="text" spellcheck="false" aria-describedby="org-name-hint" autocomplete="orgname">
           </div>
 
         </div>
