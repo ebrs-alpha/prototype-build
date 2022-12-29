@@ -26,7 +26,19 @@
 
 
 
+<style>
+  .file-upload--border {
+    outline: 2px dashed #B1B4B6;
+    padding: 5px 15px;
+    transition: outline-offset .1s ease-in-out, background-color .1s linear;
+}
 
+.file-upload--noborder {
+    outline: 1px solid #B1B4B6;
+    padding: 5px 15px;
+    transition: outline-offset .1s ease-in-out, background-color .1s linear;
+}
+</style>
 
     
     
@@ -141,13 +153,75 @@
           <li>in PDF, .jpeg, .png or .doc format</li>
         </ul>
         <p class="govuk-body">You can upload multiple documents.</p>
-        <div class="govuk-form-group">
-            <label class="govuk-label" for="file-upload-1">
-              Upload a file
-            </label>
-            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+
+        <div class="govuk-grid-row govuk-!-margin-bottom-3">
+          <label class="govuk-label govuk-!-font-weight-bold govuk-visually-hidden" for="file-upload-1">
+              Upload an invoice
+              </label>
+            <div class="govuk-grid-column-full govuk-!-margin-bottom-3">
+              <div class="file-upload--border">
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+              </div>
+            </div>
+
+            <div class="govuk-grid-column-full">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Upload
+              </button>
+            </div> 
+
+           
+            <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-6">
+              <div class="file-upload--noborder">
+                <p class="govuk-body nofileupload">No file uploaded</p>
+              </div>
+            </div> -->
+            
+            <div class="govuk-grid-column-full govuk-!-margin-bottom-6">
+              <div class="file-upload--noborder">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dd class="govuk-summary-list__value">
+                      Uploaded file name is here<span class="govuk-!-margin-left-6">8mb</span>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Remove<span class="govuk-visually-hidden"> file uploaded</span>
+                      </a>
+                    </dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dd class="govuk-summary-list__value">
+                      Uploaded file name is here and its long<span class="govuk-!-margin-left-6">8mb</span>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Remove<span class="govuk-visually-hidden"> file uploaded</span>
+                      </a>
+                    </dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dd class="govuk-summary-list__value">
+                      Uploaded file name is here and its here too<span class="govuk-!-margin-left-6">8mb</span>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Remove<span class="govuk-visually-hidden"> file uploaded</span>
+                      </a>
+                    </dd>
+                  </div>
+
+                </dl>
+              </div>
+            </div>
+
           </div>
-          <p class="govuk-body">If you don't have this evidence now, you can upload it later.</p>
+
+
+
+
 
 
 <a href="check-answers.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
