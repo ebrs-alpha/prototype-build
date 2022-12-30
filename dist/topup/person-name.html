@@ -120,7 +120,10 @@
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
                 <li>
-                  <a href="#select-option">Enter your full name</a>
+                  <a href="#select-option">Enter your first name</a>
+                </li>
+                <li>
+                  <a href="#select-option">Enter your last name</a>
                 </li>
               </ul>
             </div>
@@ -137,32 +140,39 @@
         
 
 
+
+      <div class="govuk-form-group">
+
+        <h1 class="govuk-label-wrapper govuk-heading-l">
+          What is your full name?
+      </h1>
+      <div id="person-name-hint" class="govuk-hint">
+        Enter your name in full, as it appears on official documents - don’t use initials.
+      </div>
+
+        
+        <span style="display:none" id="select-option" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span>Enter your full name<br>
+          <span class="govuk-visually-hidden">Error:</span>Enter your last name<br>
+        </span>
+
         <div class="govuk-form-group">
-
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="person-name">
-            What is your full name?
+          <label class="govuk-label" for="first-name">
+            First name
           </label>
-        </h1>
-        <div id="person-name-hint" class="govuk-hint">
-          Enter your name in full, as it appears on official documents - don’t use initials.
+          <input class="govuk-input govuk-input--width-20" id="first-name" name="name" type="text" spellcheck="false" autocomplete="name"  aria-describedby="person-name-hint">
         </div>
 
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>First name</li>
-          <li>Middle name (optional)</li>
-          <li>Last name</li>
-        </ul>
-          
-          <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter your full name
-          </span>
-
-          <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="person-name" name="name" type="text" spellcheck="false" autocomplete="name"  aria-describedby="person-name-hint">
-          </div>
-
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="last-name">
+            Last name
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="last-name" name="name" type="text" spellcheck="false" autocomplete="name"  aria-describedby="person-name-hint">
         </div>
+
+
+      </div>
 
 
 <a href="person-address.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
