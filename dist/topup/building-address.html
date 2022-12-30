@@ -120,7 +120,11 @@
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
                 <li>
-                  <a href="#select-option">Enter details to continue</a>
+                  <a href="#select-option">Enter the property address</a>
+                </li>
+                <li>
+                  <a href="#select-option">Enter the postcode, like AA1 1AA
+                  </a>
                 </li>
               </ul>
             </div>
@@ -139,21 +143,22 @@
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
   
     <h1 class="govuk-fieldset__heading">
-      Find your property address
+      What is the property address?
     </h1>
   
   </legend>
   
 
      
-      <span style="display:none" id="select-option" class="govuk-error-message">
-        <span class="govuk-visually-hidden">Error:</span>Enter details to continue
-      </span>
-        
+     
+  <span style="display:none" id="select-option" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>Enter the property address <br>
+    <span class="govuk-visually-hidden">Error:</span>Enter the postcode, like AA1 1AA
+  </span>
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="address-housenumber">
-    Property number (if you have one)
+    Address number (if you have one)
   </label>
 
 <input class="govuk-input govuk-input--width-5" id="address-housenumber" name="address-details" type="text">
@@ -164,7 +169,7 @@
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="address-postcode">
-    Postcode
+    Enter the postcode, like AA1 1AA
   </label>
 
 <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-details" type="text" autocomplete="postal-code">
