@@ -121,7 +121,7 @@
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
                 <li>
-                  <a href="#select-option">Enter the amount of litres used</a>
+                  <a href="#select-option">Enter the volume in numbers only without commas, full-stops or spaces</a>
                 </li>
               </ul>
             </div>
@@ -138,17 +138,21 @@
 
         
        
-      <h1 class="govuk-heading-l">How many litres of kerosene did the property use in the last financial year?</h1>
+      <h1 class="govuk-heading-l">How many litres of kerosene were used at the property?</h1>
 
         <div class="govuk-form-group">
 
+          <div id="meter-name-hint" class="govuk-hint">
+            Enter the volume in numbers only from [start date] to [end].
+          </div>
+
 
           <label class="govuk-label govuk-label" for="litres">
-           Litres used
+           Litres
           </label>
 
           <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter the amount of litres used
+            <span class="govuk-visually-hidden">Error:</span>Enter the volume in numbers only without commas, full-stops or spaces
           </span>
 
           <div class="govuk-form-group">

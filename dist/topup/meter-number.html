@@ -121,7 +121,7 @@
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
                 <li>
-                  <a href="#select-option">Enter the meter number</a>
+                  <a href="#select-option">Enter a meter number that uses numbers and letters only</a>
                 </li>
               </ul>
             </div>
@@ -139,21 +139,24 @@
 
         
        
-        <h1 class="govuk-heading-l">What is the meter number that is connected to the building you are applying for (MPAN etc)?</h1>
+        <h1 class="govuk-heading-l">What is the electricity meter number?</h1>
 
         <div class="govuk-form-group">
 
+          <div id="meter-name-hint" class="govuk-hint">
+            This may be called an MPAN or XXX on the electricity bill.
+          </div>
 
           <label class="govuk-label govuk-label" for="meternumber">
            Meter number
           </label>
 
           <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter the meter number
+            <span class="govuk-visually-hidden">Error:</span>Enter a meter number that uses numbers and letters only
           </span>
 
           <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="meternumber" name="meternumber" type="text" spellcheck="false" autocomplete="meternumber">
+            <input class="govuk-input govuk-input--width-20" id="meternumber" name="meternumber" type="text" spellcheck="false" autocomplete="meternumber" aria-describedby="meter-name-hint">
           </div>
 
         </div>
