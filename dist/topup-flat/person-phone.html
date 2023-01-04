@@ -140,31 +140,51 @@
         
        
 
-        <div class="govuk-form-group">
-
-
-          <h1 class="govuk-heading-l">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="telephone-number">
             What is your phone number?
-        </h1>
-        <div id="person-name-hint" class="govuk-hint">
-          We might use your phone number to contact you about your application.
+          </label>
+          </h1>
+      
+        
+        
+        <div id="telephone-number-hint" class="govuk-hint">
+          <div class="govuk-!-margin-bottom-2">Include a local area code for landline numbers.</div><div>The Department for Business, Energy and Industrial Strategy or your local council might use your phone number to contact you about your application.</div>
         </div>
+      
+      <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" aria-describedby="telephone-number-hint" autocomplete="tel">
+      
+      </div>
 
 
-        <label class="govuk-label" for="person-name">UK phone number
-        </label>
 
-                    
-          <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter your phone number
-          </span>
+      <div class="govuk-form-group">
 
-          <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="address" name="address" type="text" spellcheck="false" autocomplete="address">
-          </div>
-
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          
+            
+                
+              
+                
+                
+                
+                
+                
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="no-phone" name="no-phone" type="checkbox" value="no-phone" data-behaviour="exclusive">
+                  <label class="govuk-label govuk-checkboxes__label" for="no-phone">
+              I do not have a phone number
+            </label>
+                  
+                </div>
+                
+              
+            
+          
         </div>
-
+      
+      </div>
 
 
 <a href="organisation-name.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
@@ -279,11 +299,6 @@
 
         $('.govuk-button').click(function (e) {
 
-          if (!$("input[name='address']").val()) {
-            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-            $(".govuk-error-summary, .govuk-error-message").show();
-            return false;
-          };
 
 
         });
