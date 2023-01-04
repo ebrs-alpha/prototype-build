@@ -135,51 +135,67 @@
   <div class="govuk-grid-row">
 
 
-
     <div class="govuk-grid-column-two-thirds">
+      
 
-        
-       
-        <h1 class="govuk-heading-l">What is your email address?</h1>
-
-        <div class="govuk-form-group">
-
-
-          <label class="govuk-label govuk-label" for="address">
-           Email address
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="email">
+            What is your email address?
           </label>
-
-                    
-          <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter an email address in the correct 
-            format, like name@example.com
-          </span>
-
-          <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-20" id="address" name="address" type="text" spellcheck="false" autocomplete="address">
-          </div>
-
+          </h1>
+      
+        
+        
+        <div id="email-hint" class="govuk-hint">
+          The Department for Business, Energy and Industrial Strategy or your local council will use your email address to send you updates about your application. We might need to ask you to confirm some details.
         </div>
-
-
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-             Why we need this
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            We will only use this if we need to contact you about your application.
+      
+      <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" autocomplete="name">
+      
+      </div>
+      
+            
+      
+      
+      <div class="govuk-form-group">
+      
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          
+            
+                
+              
+                
+                
+                
+                
+                
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="no-email" name="no-email" type="checkbox" value="no-email" data-behaviour="exclusive">
+                  <label class="govuk-label govuk-checkboxes__label" for="no-email">
+              I do not have access to an email address
+            </label>
+                  
+                </div>
+                
+              
+            
+          
+        </div>
+      
+      </div>
+      
+            
+      
+        
+          
+        
+      
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
       
           </div>
-        </details>
-
-
-<a href="person-phone.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
-         Continue</a>
-        
-    </div>
-
 
 
 
