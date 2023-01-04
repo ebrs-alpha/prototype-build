@@ -144,7 +144,7 @@
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
   
     <h1 class="govuk-fieldset__heading">
-      Does the property have a different address to the business address?
+      Does the property have the same address as the business?
     </h1>
   
   </legend>
@@ -326,10 +326,10 @@
 
 
           if ($('#same-address').is(':checked')) {
-            window.location.href = 'building-address.html';
+            window.location.href = 'meter-number.html';
           }
           else if ($('#same-address-2').is(':checked')) {
-            window.location.href = 'meter-number.html';
+            window.location.href = 'building-address.html';
           };
 
             if (!$("input[name='same-address']:checked").val()) {
