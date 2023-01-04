@@ -138,6 +138,10 @@
     <div class="govuk-grid-column-two-thirds">
       
 
+
+    
+      
+      
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--l" for="email">
@@ -154,12 +158,10 @@
       <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" autocomplete="name">
       
       </div>
-      
-            
-      
-      
+
+
       <div class="govuk-form-group">
-      
+
         <div class="govuk-checkboxes" data-module="govuk-checkboxes">
           
             
@@ -189,11 +191,8 @@
       
         
           
-        
-      
-      <button class="govuk-button" data-module="govuk-button">
-        Continue
-      </button>
+      <a href="person-phone.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
+        Continue</a>
       
           </div>
 
@@ -303,11 +302,6 @@
 
         $('.govuk-button').click(function (e) {
 
-          if (!$("input[name='address']").val()) {
-            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-            $(".govuk-error-summary, .govuk-error-message").show();
-            return false;
-          };
 
 
         });
