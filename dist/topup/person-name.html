@@ -125,47 +125,23 @@
 
         
 
-
-        <div class="govuk-form-group">
-
-          <h1 class="govuk-label-wrapper govuk-heading-l">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="full-name">
             What is your full name?
-        </h1>
-        <div id="person-name-hint" class="govuk-hint">
-          Enter your name in full, as it appears on official documents - don’t use initials.
-        </div>
-
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="first-name">
-              First name
-            </label>
-            <input class="govuk-input govuk-input--width-20" id="first-name" name="name" type="text" spellcheck="false" autocomplete="name">
-          </div>
-
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="last-name">
-              Last name
-            </label>
-            <input class="govuk-input govuk-input--width-20" id="last-name" name="name" type="text" spellcheck="false" autocomplete="name">
-          </div>
-
-
-        </div>
-
-
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-             Why we need this
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            So we have an authorised contact if we have any queries.
+          </label>
+          </h1>
       
-          </div>
-        </details>
+        
+        
+        <div id="full-name-hint" class="govuk-hint">
+          Give your name as it appears on official accounts such as your bank account, council tax bill, or Universal Credit account.
+        </div>
+      
+      <input class="govuk-input" id="full-name" name="full-name" type="text" aria-describedby="full-name-hint" autocomplete="name">
+      
+      </div>
+
 
 
 <a href="person-address.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
