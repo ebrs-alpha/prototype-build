@@ -184,14 +184,6 @@
             </div>
 
 
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="other" name="org-type" type="radio" value="other" data-aria-controls="org-cond-other">
-              <label class="govuk-label govuk-radios__label" for="other">
-                Other
-              </label>
-            </div>
-
-
 
           </div>
       
@@ -199,7 +191,7 @@
       </div>
 
 
-<a href="#" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
+<a href="organisation-reg.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
         Continue</a>
         
     </div>
@@ -310,15 +302,12 @@
 
         $('.govuk-button').click(function (e) {
 
-          if ($('#org-type1').is(':checked')) {
-            window.location.href = 'organisation-address.html';
-          }
-          else if ($('#other').is(':checked')) {
-            window.location.href = 'organisation-other.html';
-          }
-          else {
-            window.location.href = 'organisation-reg.html';
-          };
+          // if ($('#org-type1').is(':checked')) {
+          //   window.location.href = 'nadeem.html';
+          // }
+          // else {
+          //   window.location.href = 'building-address.html';
+          // };
 
 
           if (!$("input[name='org-type']:checked").val()) {
