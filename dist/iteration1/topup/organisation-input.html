@@ -114,8 +114,22 @@
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
 
+          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#select-option">Enter a registration number</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
- <!-- <form action="person-address.html" method="post" novalidate>  -->
+
+
+ <!-- <form action="upload-invoices.html" method="post" novalidate>  -->
 
   <div class="govuk-grid-row">
 
@@ -124,19 +138,29 @@
     <div class="govuk-grid-column-two-thirds">
 
         
+       
+        <h1 class="govuk-heading-l">What is your organisation registration number?</h1>
+
+        <div class="govuk-form-group">
+
+          <div id="main-business-hint" class="govuk-hint">
+            You can search the <a href=”https://www.gov.uk/get-information-about-a-company”>companies house</a> [opens new window] or <a href="https://www.gov.uk/find-charity-information">charity register</a> [opens new window] for these. You can also check you’re using the correct <a href=”https://www.gov.uk/check-uk-vat-number”>VAT number</a>  [opens new window]
+          </div>
 
 
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-           Describe the type of organisation
+          <label class="govuk-label govuk-label" for="meternumber">
+            The registration number you provide should correspond with your answer in the previous question.
           </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          Provide a brief overview of your organisation
-        </div>
-        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-      </div>
 
+          <span style="display:none" id="select-option" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Enter a registration number
+          </span>
+
+          <div class="govuk-form-group">
+            <input class="govuk-input govuk-input--width-10" id="meternumber" name="meternumber" type="text" spellcheck="false" autocomplete="meternumber" aria-describedby="meter-name-hint">
+          </div>
+
+        </div>
 
 
 <a href="organisation-address.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
@@ -250,6 +274,14 @@
 
 
         $('.govuk-button').click(function (e) {
+
+          if (!$("input[name='meternumber']").val()) {
+            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+            $(".govuk-error-summary, .govuk-error-message").show();
+            return false;
+          };
+
+
         });
 
 
