@@ -6,7 +6,7 @@
     <title>
        Apply for energy bill support for non-domestic alternative fuel properties
 </title>
-    <meta name="viewport" content="width=org-typeice-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -121,7 +121,7 @@
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
                 <li>
-                  <a href="#select-option">Select an option to continue</a>
+                  <a href="#select-option">Enter a registration number</a>
                 </li>
               </ul>
             </div>
@@ -129,7 +129,7 @@
 
 
 
- <!-- <form action="organisation-regno.html" method="post" novalidate>  -->
+ <!-- <form action="upload-invoices.html" method="post" novalidate>  -->
 
   <div class="govuk-grid-row">
 
@@ -138,69 +138,33 @@
     <div class="govuk-grid-column-two-thirds">
 
         
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-6">
-            <h1 class="govuk-fieldset__heading">
-              What is your organisation type?
-            </h1>
-          </legend>
+       
+        <h1 class="govuk-heading-l">What is your organisation registration number?</h1>
+
+        <div class="govuk-form-group">
+
+          <div id="main-business-hint" class="govuk-hint">
+            You can search the <a href=”https://www.gov.uk/get-information-about-a-company”>companies house</a> [opens new window] or <a href="https://www.gov.uk/find-charity-information">charity register</a> [opens new window] for these. You can also check you’re using the correct <a href=”https://www.gov.uk/check-uk-vat-number”>VAT number</a>  [opens new window]
+          </div>
+
+
+          <label class="govuk-label govuk-label" for="meternumber">
+            The registration number you provide should correspond with your answer in the previous question.
+          </label>
 
           <span style="display:none" id="select-option" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Select an option to continue
+            <span class="govuk-visually-hidden">Error:</span>Enter a registration number
           </span>
 
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="org-type1" name="org-type" type="radio" value="org-type1">
-              <label class="govuk-label govuk-radios__label" for="org-type1">
-                Sole trader
-              </label>   
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="org-type2" name="org-type" type="radio" value="org-type2"  data-aria-controls="org-cond-type2">
-              <label class="govuk-label govuk-radios__label" for="org-type2">
-                Registered business
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="org-type3" name="org-type" type="radio" value="org-type3" data-aria-controls="org-cond-type3">
-              <label class="govuk-label govuk-radios__label" for="org-type3">
-                Registered charity
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="org-type4" name="org-type" type="radio" value="org-type4" data-aria-controls="org-cond-type4">
-              <label class="govuk-label govuk-radios__label" for="org-type4">
-               Place of worship
-              </label>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="org-type5" name="org-type" type="radio" value="org-type5" data-aria-controls="org-cond-type5">
-              <label class="govuk-label govuk-radios__label" for="org-type5">
-                Educational institute
-              </label>
-            </div>
-
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="other" name="org-type" type="radio" value="other" data-aria-controls="org-cond-other">
-              <label class="govuk-label govuk-radios__label" for="other">
-                Other
-              </label>
-            </div>
-
-
-
+          <div class="govuk-form-group">
+            <input class="govuk-input govuk-input--width-10" id="meternumber" name="meternumber" type="text" spellcheck="false" autocomplete="meternumber" aria-describedby="meter-name-hint">
           </div>
-      
-        </fieldset>
-      </div>
+
+        </div>
 
 
 <a href="organisation-address.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
-        Continue</a>
+         Continue</a>
         
     </div>
 
@@ -308,17 +272,25 @@
 
       $( document ).ready(function() {
 
+
         $('.govuk-button').click(function (e) {
 
-
-          if (!$("input[name='org-type']:checked").val()) {
-              $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-              $(".govuk-error-summary, .govuk-error-message").show();
-              return false;
-            };
+          if (!$("input[name='meternumber']").val()) {
+            $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+            $(".govuk-error-summary, .govuk-error-message").show();
+            return false;
+          };
 
 
         });
+
+
+
+
+
+
+
+
 
       });
     </script>

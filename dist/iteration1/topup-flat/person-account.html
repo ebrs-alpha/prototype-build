@@ -115,41 +115,99 @@
 
 
 
- <!-- <form action="person-address.html" method="post" novalidate>  -->
-
-  <div class="govuk-grid-row">
-
-
-
-    <div class="govuk-grid-column-two-thirds">
-
-        
-
-
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-          Describe your organisation
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          If you’re not a registered organisation, we will need to carry out further checks to confirm your eligibility. Please tell us more about the type of organisation you are applying for to help speed this process. For example, sole trader, farm or not-for-profit organisation.
-        </div>
-        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
-      </div>
-
-
-
-<a href="organisation-address.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
-         Continue</a>
-        
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#select-option">Select an option to continue</a>
+        </li>
+      </ul>
     </div>
-
-
-
-
   </div>
 
- <!-- </form>  -->
+
+
+
+<!-- <form action="" method="post" novalidate> -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+  
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  
+    <h1 class="govuk-fieldset__heading">
+      Is this a single or joint bank account?
+    </h1>
+  
+  </legend>
+
+  <span style="display:none" id="select-option" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>Select an option to continue
+  </span>
+
+  <div class="govuk-radios"
+    data-module="govuk-radios">
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="kerosene-amount" name="kerosene-amount" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="kerosene-amount">
+      Single 
+      </label>
+          
+        </div>
+        
+        
+      
+    
+      
+        
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="kerosene-amount-2" name="kerosene-amount" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="kerosene-amount-2">
+       Joint
+      </label>
+          
+        </div>
+
+
+
+        
+        
+        
+      
+    
+  </div>
+  
+
+</fieldset>
+
+
+</div>
+
+      
+
+  
+    
+  
+
+<a href="person-name.html" class="govuk-button" data-module="govuk-button">
+  Continue
+</a>
+
+    </div>
+  </div>
+
+ <!-- </form> -->
 
         </main>
       </div>
@@ -248,8 +306,16 @@
 
       $( document ).ready(function() {
 
+        $(".govuk-error-summary, .govuk-error-message").hide();
 
         $('.govuk-button').click(function (e) {
+
+            if (!$("input[name='kerosene-amount']:checked").val()) {
+              $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+              $(".govuk-error-summary, .govuk-error-message").show();
+              return false;
+            };
+
         });
 
 
