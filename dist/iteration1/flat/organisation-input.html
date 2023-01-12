@@ -141,10 +141,11 @@
        
         <h1 class="govuk-heading-l">What is your organisation registration number?</h1>
 
+        
         <div class="govuk-form-group">
 
-          <div id="main-business-hint" class="govuk-hint">
-            You can search the <a href=”https://www.gov.uk/get-information-about-a-company”>companies house</a> [opens new window] or <a href="https://www.gov.uk/find-charity-information">charity register</a> [opens new window] for these. You can also check you’re using the correct <a href=”https://www.gov.uk/check-uk-vat-number”>VAT number</a>  [opens new window]
+          <div id="reg-hint" class="govuk-hint">
+            You can search the <a href="https://www.gov.uk/get-information-about-a-company" target="_blank">companies house</a> [opens new window] or <a href="https://www.gov.uk/find-charity-information" target="_blank">charity register</a> [opens new window] for these. You can also check you’re using the correct <a href="https://www.gov.uk/check-uk-vat-number" target="_blank">VAT number</a>  [opens new window]
           </div>
 
 
@@ -157,7 +158,7 @@
           </span>
 
           <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-10" id="orgregnumber" name="orgregnumber" type="text" spellcheck="false" autocomplete="orgregnumber">
+            <input class="govuk-input govuk-input--width-10" id="orgregnumber" name="orgregnumber" type="text" spellcheck="false" autocomplete="orgregnumber" aria-describedby="reg-hint">
           </div>
 
         </div>
