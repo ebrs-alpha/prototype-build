@@ -148,7 +148,7 @@
           </div>
 
 
-          <label class="govuk-label govuk-label" for="meternumber">
+          <label class="govuk-label govuk-label" for="orgregnumber">
             The registration number you provide should correspond with your answer in the previous question.
           </label>
 
@@ -157,7 +157,7 @@
           </span>
 
           <div class="govuk-form-group">
-            <input class="govuk-input govuk-input--width-10" id="meternumber" name="meternumber" type="text" spellcheck="false" autocomplete="meternumber" aria-describedby="meter-name-hint">
+            <input class="govuk-input govuk-input--width-10" id="orgregnumber" name="orgregnumber" type="text" spellcheck="false" autocomplete="orgregnumber">
           </div>
 
         </div>
@@ -275,7 +275,7 @@
 
         $('.govuk-button').click(function (e) {
 
-          if (!$("input[name='meternumber']").val()) {
+          if (!$("input[name='orgregnumber']").val()) {
             $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
             $(".govuk-error-summary, .govuk-error-message").show();
             return false;
