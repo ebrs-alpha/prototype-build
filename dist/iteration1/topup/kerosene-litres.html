@@ -121,45 +121,30 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-        
+
+      <h1 class="govuk-heading-l">How many litres of kerosene were used at the property?</h1>
+
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="litres-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              How many litres of kerosene were used at the property?
-            </h1>
-          </legend>
-          <div id="litres-hint" class="govuk-hint">
-            Enter the volume in numbers only from [start date] to [end].
-          </div>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-many-litres" name="how-many-litres" type="radio" value="england">
-              <label class="govuk-label govuk-radios__label" for="how-many-litres">
-                10,000 and 15,000 litres
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-many-litres-2" name="how-many-litres" type="radio" value="scotland">
-              <label class="govuk-label govuk-radios__label" for="how-many-litres-2">
-                15,001 and 20,000 litres
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-many-litres-3" name="how-many-litres" type="radio" value="wales">
-              <label class="govuk-label govuk-radios__label" for="how-many-litres-3">
-                20,001 and 50,000 litres
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="how-many-litres-4" name="how-many-litres" type="radio" value="northern-ireland">
-              <label class="govuk-label govuk-radios__label" for="how-many-litres-4">
-                50,001+ litres 
-              </label>
-            </div>
-          </div>
-        </fieldset>
+
+        <div id="meter-name-hint" class="govuk-hint">
+          Enter the volume in numbers only from [start date] to [end].
+        </div>
+
+
+        <label class="govuk-label govuk-label" for="litres">
+         Litres
+        </label>
+
+        <span style="display:none" id="select-option" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span>Enter the volume in numbers only without commas, full-stops or spaces
+        </span>
+
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-input--width-10" id="litres" name="litres" type="text" spellcheck="false" autocomplete="litres">
+        </div>
+
       </div>
+
 
 
 <a href="upload-moreinvoices.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
