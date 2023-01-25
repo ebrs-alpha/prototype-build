@@ -125,17 +125,20 @@
 
         
 
-
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-          Describe your organisation or business
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          If you’re not a registered organisation or business, we will need to carry out further checks to confirm your eligibility. 
-          Tell us more about your organisation or business. For example, sole trader, farm or not-for-profit organisation.
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="with-hint">
+            Describe your organisation or business
+            </label>
+          </h1>
+          <div id="with-hint-hint" class="govuk-hint">
+            If you’re not a registered organisation or business, we will need to carry out further checks to confirm your eligibility. Tell us more about your organisation or business. For example, sole trader, farm or not-for-profit organisation.
+          </div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
         </div>
-        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+        <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+          You can enter up to 250 characters
+        </div>
       </div>
 
 
