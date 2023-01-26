@@ -119,34 +119,28 @@
         <div class="govuk-grid-column-two-thirds">
           <h1 class="govuk-heading-l">What are the bank details for your organisation or business?</h1>
 
-
-    
           <div class="govuk-form-group">
-    
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              
-                
-                    
-                  
-                    
-                    
-                    
-                    
-                    
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="business-account" name="business-account" type="checkbox" value="yes">
-                      <label class="govuk-label govuk-checkboxes__label" for="business-account">
-                  This is a business account
-                </label>
-                      
-                    </div>
-                    
-                  
-                
-              
-            </div>
-          
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                Is this a personal bank or building society account?
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="business-account-1" name="business-account" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="business-account-1">
+                    No
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="#business-account-2" name="business-account" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="business-account-2">
+                    Yes
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
+  
 
 
     
@@ -352,10 +346,10 @@
         $('.govuk-button').click(function (e) {
 
 
-        if ($('#business-account').is(':checked')) {
+        if ($('#business-account-1').is(':checked')) {
             window.location.href = 'person-name.html';
           }
-          else if (!$('#business-account').is(':checked')) {
+          else if (!$('#business-account-2').is(':checked')) {
             window.location.href = 'person-dob.html';
           };
 
