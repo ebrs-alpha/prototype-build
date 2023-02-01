@@ -144,10 +144,16 @@
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
   
     <h1 class="govuk-fieldset__heading">
-      Did your organisation or business purchase at least 10,000 litres of kerosene (heating oil) for use at this property between September 2021 and August 2022?
+      Did your organisation or business purchase at least 10,000 litres of kerosene (heating oil) for use at this property between October 2021 and September 2022?
     </h1>
   
   </legend>
+
+
+  <div id="kerosene-hint" class="govuk-hint">
+    If your organisation or business was not operating before 1 December 2021, tell us if you purchased over 10,000 litres of kerosene (heating oil) between December 2021 and November 2022.
+  </div>
+
 
   <span style="display:none" id="select-option" class="govuk-error-message">
     <span class="govuk-visually-hidden">Error:</span>Select an option to continue
@@ -157,7 +163,7 @@
     data-module="govuk-radios">
         
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="kerosene-amount" name="kerosene-amount" type="radio" value="yes">
+          <input class="govuk-radios__input" id="kerosene-amount" name="kerosene-amount" type="radio" value="yes" aria-describedby="kerosene-hint">
           <label class="govuk-label govuk-radios__label" for="kerosene-amount">
         Yes
       </label>
