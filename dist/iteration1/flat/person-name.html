@@ -135,8 +135,13 @@ What is your full name?
           <label class="govuk-label govuk-visually-hidden" for="first-name">
             enter full name
           </label>
+
+
+          <div id="person-name-hint" class="govuk-hint">
+            Enter the name that you use for banking. Do not enter your organisation's name.
+          </div>
       
-      <input class="govuk-input" id="first-name" name="first-name" type="text" autocomplete="name">
+      <input class="govuk-input" id="first-name" name="first-name" type="text" autocomplete="name" aria-describedby="person-name-hint">
       
       </div>
 
