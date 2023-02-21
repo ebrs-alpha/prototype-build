@@ -117,7 +117,33 @@
      <!-- <form action="building-address.html" method="post" novalidate=""> --> 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-l">What are the bank details for your organisation or business?</h1>
+          <h1 class="govuk-heading-l">Bank or building society account details for your organisation or business</h1>
+
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                Is this a bank or building society account?
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="business-account-1" name="business-account" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="business-account-1">
+                    Bank account
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="business-account-2" name="business-account" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="business-account-2">
+                    Building society account
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
 
 
 
@@ -128,14 +154,14 @@
               </legend>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="business-account-1" name="business-account" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="business-account-1">
+                  <input class="govuk-radios__input" id="business-account-3" name="business-account-type" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="business-account-3">
                     No
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="#business-account-2" name="business-account" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="business-account-2">
+                  <input class="govuk-radios__input" id="#business-account-4" name="business-account-type" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="business-account-4">
                     Yes
                   </label>
                 </div>
@@ -339,17 +365,18 @@
   <script src="../public/javascripts/auto-store-data.js"></script>
 
   
+  
   <script type="text/javascript">
 
     $( document ).ready(function() {
 
       $('.govuk-button').click(function (e) {
 
-
-      if ($('#business-account-1').is(':checked')) {
+if ($('#business-account-3').is(':checked')) {
           window.location.href = 'person-name.html';
         }
-        else if (!$('#business-account-2').is(':checked')) {
+
+        else if (!$('#business-account-4').is(':checked')) {
           window.location.href = 'person-dob.html';
         };
 
