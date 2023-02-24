@@ -6,7 +6,7 @@
     <title>
        Apply for energy bill support for non-domestic alternative fuel properties
 </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=org-typeice-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,19 +24,7 @@
   <!--[if lte IE 8]><link href="../public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 <!--[if gt IE 8]><!--><link href="../public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
 
-<style>
-  .file-upload--border {
-    outline: 2px dashed #B1B4B6;
-    padding: 5px 15px;
-    transition: outline-offset .1s ease-in-out, background-color .1s linear;
-}
 
-.file-upload--noborder {
-    outline: 1px solid #B1B4B6;
-    padding: 5px 15px;
-    transition: outline-offset .1s ease-in-out, background-color .1s linear;
-}
-</style>
 
 
 
@@ -126,8 +114,22 @@
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
 
+          <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#select-option">Select an option to continue</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
- <!-- <form action="authorised-persons.html" method="post" novalidate>  -->
+
+
+ <!-- <form action="organisation-regno.html" method="post" novalidate>  -->
 
   <div class="govuk-grid-row">
 
@@ -136,169 +138,45 @@
     <div class="govuk-grid-column-two-thirds">
 
         
-       
-        <h1 class="govuk-heading-l">Upload proof of purchase for [first line of property address]</h1>
-        
-        <p class="govuk-body">Invoices must show:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>kerosene (heating oil) purchased for use at [first line of property address] from October 2021 to September 2022 (or November 2021 to November 2022 for organisations or businesses not operating before 1 November 2021)</li>
-           <li>the address of the property, or your business or organisation details</li>  
-        </ul>
-        <p class="govuk-body">You can upload more than one invoice or create a single document of several invoices.
-        </p>
-
-        <div class="govuk-warning-text">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-warning-text__assistive">Warning</span>
-            Do not close this tab or window before you select Continue or the documents will not be saved.
-          </strong>
-        </div>
-
-        <p class="govuk-body">Each document must be:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>no more than 10MB in size</li>
-          <li>in PDF, jpeg, png or doc format</li>
-          <li>labelled clearly, such as invoice1.pdf</li>
-        </ul>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-6">
+            <h1 class="govuk-fieldset__heading">
+             Is this the first and only application you have made for [first line of property address]?
+            </h1>
+          </legend>
 
 
-        <div class="govuk-grid-row govuk-!-margin-bottom-3">
-          <label class="govuk-label govuk-!-font-weight-bold govuk-visually-hidden" for="file-upload-1">
-              Upload an invoice
+
+
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="org-type1" name="org-type" type="radio" value="org-type1">
+              <label class="govuk-label govuk-radios__label" for="org-type1">
+                Yes
+              </label>   
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="org-type2" name="org-type" type="radio" value="org-type2">
+              <label class="govuk-label govuk-radios__label" for="org-type2">
+              No, I am reapplying
               </label>
-            <div class="govuk-grid-column-full govuk-!-margin-bottom-3">
-              <div class="file-upload--border">
-                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-              </div>
             </div>
 
-            <div class="govuk-grid-column-full">
-              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Upload
-              </button>
-            </div> 
 
 
 
-            <details class="govuk-details" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  If you were not able to upload your documents
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                You must send us copies of any invoices you cannot upload by email or post. We’ll tell you where to send them at the end of your application.
-              </div>
-            </details>
 
-           
-            <!-- <div class="govuk-grid-column-full govuk-!-margin-bottom-6">
-              <div class="file-upload--noborder">
-                <p class="govuk-body nofileupload">No file uploaded</p>
-              </div>
-            </div> -->
-            
-            <div class="govuk-grid-column-full govuk-!-margin-bottom-6">
-              <div class="file-upload--noborder">
-                <dl class="govuk-summary-list">
-                  <div class="govuk-summary-list__row">
-                    <dd class="govuk-summary-list__value">
-                      proofOfPurchase1.pdf<span class="govuk-!-margin-left-6">1mb</span>
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="#">
-                        Remove<span class="govuk-visually-hidden"> file uploaded</span>
-                      </a>
-                    </dd>
-                  </div>
 
-                  <div class="govuk-summary-list__row">
-                    <dd class="govuk-summary-list__value">
-                      proofOfPurchase2.pdf<span class="govuk-!-margin-left-6">1mb</span>
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="#">
-                        Remove<span class="govuk-visually-hidden"> file uploaded</span>
-                      </a>
-                    </dd>
-                  </div>
-
-                  <div class="govuk-summary-list__row">
-                    <dd class="govuk-summary-list__value">
-                      proofOfPurchase3.pdf<span class="govuk-!-margin-left-6">1mb</span>
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="#">
-                        Remove<span class="govuk-visually-hidden"> file uploaded</span>
-                      </a>
-                    </dd>
-                  </div>
-
-                </dl>
-              </div>
-            </div>
 
           </div>
+      
+        </fieldset>
+      </div>
 
 
-
-
-
-
-
-
-
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="label-as-page-heading">
-                Use this text box to explain any issues with your invoices, such as discrepancies or omissions.
-              </label>
-              <textarea class="govuk-textarea govuk-js-character-count" id="label-as-page-heading" name="label-as-page-heading" rows="5" aria-describedby="label-as-page-heading-info"></textarea>
-            </div>
-            <div id="label-as-page-heading-info" class="govuk-hint govuk-character-count__message">
-              You can enter up to 1000 characters
-            </div>
-          </div>
-
-
-
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="submit-hint">
-              <legend class="govuk-fieldset__legend">
-                Have you uploaded all the required invoices for your application?
-              </legend>
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="submit" name="submit" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="submit">
-                   Yes
-                  </label>
-
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="submit-2" name="submit" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="submit-2">
-                   No
-                  </label>
-
-                </div>
-              </div>
-            </fieldset>
-          </div>
-
-
-
-
-        
-
-<a href="property-application.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
-         Continue</a>
-
-
-
-
+<a href="check-answers.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
+        Continue</a>
         
     </div>
 
@@ -414,7 +292,37 @@
 
   <script src="../public/javascripts/auto-store-data.js"></script>
 
+  
+    <script type="text/javascript">
 
+      $( document ).ready(function() {
+
+        $('.govuk-button').click(function (e) {
+
+          if ($('#org-type5').is(':checked')) {
+            window.location.href = 'organisation-type.html';
+          }
+
+          else if ($('#org-type1,#org-type2,#org-type3,#org-type4').is(':checked'))  {
+            window.location.href = 'organisation-input.html';
+          };
+
+
+          if (!$("input[name='org-type']:checked").val()) {
+              $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+              $(".govuk-error-summary, .govuk-error-message").show();
+              return false;
+            };
+
+
+        });
+
+      });
+    </script>
+
+
+    
+  
   <!-- GOV.UK Prototype Kit v12.3.0 -->
 
   </body>
