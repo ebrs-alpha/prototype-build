@@ -154,10 +154,14 @@
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="address-postcode">
-    Enter a UK postcode
+    Enter a UK postcode using a space. For example, SW1 1AA
   </label>
 
-<input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-details" type="text" autocomplete="postal-code">
+  <div id="postcode-hint" class="govuk-hint">
+    Enter postcode
+  </div>
+
+<input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-details" type="text" autocomplete="postal-code" aria-describedby="postcode-hint">
 
 </div>
 
