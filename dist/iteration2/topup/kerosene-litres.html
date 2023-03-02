@@ -122,21 +122,26 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-      <h1 class="govuk-heading-l">How many litres of kerosene (heating oil) were purchased for use at [first line of property address] from [October 2021 to September 2022 OR November 2021 to November 2022]?</h1>
+      <h1 class="govuk-heading-l">How many litres of kerosene (heating oil) were purchased for use at [first line of property address] [from 1 September 2021 to 31 August 2022 OR in the first 12 months of operating]</h1>
 
       <div class="govuk-form-group">
 
 
         <label class="govuk-label govuk-label" for="litres">
-          Enter numbers only
+          [If you started operating at the property after 1 December 2021, tell us how much kerosene you purchased by 30 November 2022.]
         </label>
+
+
+        <div id="kerosene-hint" class="govuk-hint">
+          Enter numbers only
+        </div>
 
         <span style="display:none" id="select-option" class="govuk-error-message">
           <span class="govuk-visually-hidden">Error:</span>Enter the volume in numbers only without commas, full-stops or spaces
         </span>
 
         <div class="govuk-form-group">
-          <input class="govuk-input govuk-input--width-10" id="litres" name="litres" type="text" spellcheck="false" autocomplete="litres">
+          <input class="govuk-input govuk-input--width-10" id="litres" name="litres" type="text" spellcheck="false" autocomplete="litres"  aria-describedby="kerosene-hint">
         </div>
 
       </div>
