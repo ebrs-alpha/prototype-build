@@ -4,7 +4,6 @@
   "description": "Password-protected static site example on Render",
   "main": "index.js",
   "scripts": {
-    "build": "pagecrypt src/index.html dist/index.html $PASSWORD && cp -R src/css dist/"
   },
   "author": "Render Developers",
   "license": "MIT",
