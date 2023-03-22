@@ -24,6 +24,8 @@
   <!--[if lte IE 8]><link href="../public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 <!--[if gt IE 8]><!--><link href="../public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
 
+
+
 <style>
   .file-upload--border {
     outline: 2px dashed #B1B4B6;
@@ -37,7 +39,6 @@
     transition: outline-offset .1s ease-in-out, background-color .1s linear;
 }
 </style>
-
 
 
     
@@ -137,35 +138,30 @@
 
         
        
-        <h1 class="govuk-heading-l">Upload proof of purchase for [first line of property address]</h1>
-
-
-        <p class="govuk-body">Invoices must show the address of the property, or your business or organisation details.</p>
-        <p class="govuk-body">Invoices must also show kerosene (heating oil) purchased for use at [first line of property address] from 1 September 2021 to 31 August 2022.</p>
-          <p class="govuk-body">If you began operating at the property after 1 September 2021, invoices should show purchases from the first 12 months of operations, up to 30 November 2022 at the latest. </p>
-            <p class="govuk-body">If you began operating at the property after 1 December 2021, invoices should show purchases made by 30 November 2022.</p>
-
-
-
-
-        <p class="govuk-body">You can upload more than one invoice or create a single document of several invoices.
-        </p>
+      <h1 class="govuk-heading-l">Upload proof of purchase for [first line of property address]</h1>
+        <p class="govuk-body">Your invoice must show:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>alternative fuel purchased for use at [first line of property address] from September 2022 to January 2023</li>
+          <li>the address of the property, or your business or organisation details</li>
+        </ul>
 
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
             <span class="govuk-warning-text__assistive">Warning</span>
-            Do not close this tab or window before you select Continue or the documents will not be saved.
+            Do not close this tab or window before you select Continue or the document will not be saved.
           </strong>
         </div>
 
-        <p class="govuk-body">Each document must be:</p>
+
+
+        <p class="govuk-body">Your document must be:
+        </p>
         <ul class="govuk-list govuk-list--bullet">
           <li>no more than 10MB in size</li>
           <li>in PDF, jpeg, png or doc format</li>
           <li>labelled clearly, such as invoice1.pdf</li>
         </ul>
-
 
         <div class="govuk-grid-row govuk-!-margin-bottom-3">
           <label class="govuk-label govuk-!-font-weight-bold govuk-visually-hidden" for="file-upload-1">
@@ -182,7 +178,6 @@
                 Upload
               </button>
             </div> 
-
 
 
             <details class="govuk-details" data-module="govuk-details">
@@ -217,28 +212,6 @@
                     </dd>
                   </div>
 
-                  <div class="govuk-summary-list__row">
-                    <dd class="govuk-summary-list__value">
-                      proofOfPurchase2.pdf<span class="govuk-!-margin-left-6">1mb</span>
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="#">
-                        Remove<span class="govuk-visually-hidden"> file uploaded</span>
-                      </a>
-                    </dd>
-                  </div>
-
-                  <div class="govuk-summary-list__row">
-                    <dd class="govuk-summary-list__value">
-                      proofOfPurchase3.pdf<span class="govuk-!-margin-left-6">1mb</span>
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="#">
-                        Remove<span class="govuk-visually-hidden"> file uploaded</span>
-                      </a>
-                    </dd>
-                  </div>
-
                 </dl>
               </div>
             </div>
@@ -246,17 +219,10 @@
           </div>
 
 
-
-
-
-
-
-
-
           <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
             <div class="govuk-form-group">
               <label class="govuk-label" for="label-as-page-heading">
-                Use this text box to explain any issues with your invoices, such as discrepancies or omissions.
+                Use this text box to explain any issues with your invoice, such as discrepancies or omissions.
               </label>
               <textarea class="govuk-textarea govuk-js-character-count" id="label-as-page-heading" name="label-as-page-heading" rows="5" aria-describedby="label-as-page-heading-info"></textarea>
             </div>
@@ -268,38 +234,11 @@
 
 
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="submit-hint">
-              <legend class="govuk-fieldset__legend">
-                Have you uploaded all the required invoices for your application?
-              </legend>
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="submit" name="submit" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="submit">
-                   Yes
-                  </label>
-
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="submit-2" name="submit" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="submit-2">
-                   No
-                  </label>
-
-                </div>
-              </div>
-            </fieldset>
-          </div>
-
-
-
-
         
+
 
 <a href="property-application.html" class="govuk-button govuk-!-margin-bottom-3" data-module="govuk-button">
          Continue</a>
-
 
 
 
@@ -418,7 +357,31 @@
 
   <script src="../public/javascripts/auto-store-data.js"></script>
 
+  
+    <script type="text/javascript">
 
+      $( document ).ready(function() {
+
+
+        $('.govuk-button').click(function (e) {
+
+
+        });
+
+
+
+
+
+
+
+
+
+      });
+    </script>
+
+
+    
+  
   <!-- GOV.UK Prototype Kit v12.3.0 -->
 
   </body>
