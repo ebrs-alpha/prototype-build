@@ -135,36 +135,60 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        Kerosene (heating oil) annual purchase amount
+      </h1>
+      <p class="govuk-body">
+        Tell us how much kerosene (heating oil) you bought for this property between 1 September 2021 and 31 August 2022.
+      </p>
+
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            For properties that began operating after August 2021
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>If you are applying for the kerosene top-up support and started operating after August 2021</li>
+            <li>If you began operating at this property before 30 November 2021, you must have bought more than 10,000 litres of kerosene in the 12-month period from the day you began operating. If it was after 1 December 2021, you must have bought more than 10,000 litres of kerosene before 30 November 2022 to qualify for support. You will need to provide evidence of purchases above 10,000 litres when prompted later in this application.</li>
+          </ul>
+
+
+        </div>
+      </details>
+      <p class="govuk-body">
+        If you are only applying for the £150 fixed payment, select 0 to 9,999 for this answer.</p>
+
+
+
       
 
 <div class="govuk-form-group">
 
   <fieldset class="govuk-fieldset">
   
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-  
-    <h1 class="govuk-fieldset__heading">
-      Did you purchase at least 10,000 litres of kerosene (heating oil) between 1 September 2021 and 31 August 2022?
-    </h1>
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    How much kerosene (heating oil) did you buy between these dates?
   
   </legend>
-
-  <div id="kerosene-hint" class="govuk-hint">
-    This is kerosene that was bought for use at this property. <br>If you began operating at this property between 1 September 2021 and 30 November 2021, tell us about the 12-month period from the day you began operating.<br>If you began operating on or after 1 December 2021, you must have purchased more than 10,000 litres of kerosene in the period up to 30 November 2022.
-  </div>
 
 
   <span style="display:none" id="select-option" class="govuk-error-message">
     <span class="govuk-visually-hidden">Error:</span>Select an option to continue
   </span>
 
-  <div class="govuk-radios govuk-radios--inline"
+  <div class="govuk-radios"
     data-module="govuk-radios">
         
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="kerosene-amount" name="kerosene-amount" type="radio" value="yes" aria-describedby="kerosene-hint">
           <label class="govuk-label govuk-radios__label" for="kerosene-amount">
-        Yes
+            0 to 9,999 litres
       </label>
           
         </div>
@@ -179,7 +203,7 @@
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="kerosene-amount-2" name="kerosene-amount" type="radio" value="no">
           <label class="govuk-label govuk-radios__label" for="kerosene-amount-2">
-        No
+            10,000 litres or more
       </label>
           
         </div>
