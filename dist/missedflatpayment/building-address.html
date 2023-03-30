@@ -306,10 +306,15 @@
     $( document ).ready(function() {
 
       $('.govuk-button').on("click", function() {
-          if ($("input[id='address-housenumber']").val()) {
-            window.location.href = 'is-this-your-address.html';
+
+          const str = $("input[id='address-postcode']").val();
+          const firstTwoChars = str.substring(0, 2);
+          console.log(firstTwoChars); // Co
+          if ((firstTwoChars.indexOf('BT') > -1) || (firstTwoChars.indexOf('bt') > -1))
+          {
+            window.location.href = 'missedjourney/xoservecheck-screen1.html';
           }
-          else if ($("input[id='address-postcode']").val()) {
+          else {
             window.location.href = 'choose-your-address.html';
           };
 
